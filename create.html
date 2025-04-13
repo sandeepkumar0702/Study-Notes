@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create Study Notes">
+    <title>Create Notes - Study Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">NotesApp</a>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <div class="nav-container">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="create.html">Create Notes</a></li>
+                    <li><a href="view.html">View Notes</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+            
+            <div class="dark-mode-container">
+                <label class="dark-mode-toggle">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="toggle-label">Dark Mode</span>
+                    <span class="toggle-switch"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main-content-create">
+  <section class="note-creation-container">
+      <h2 class="section-title">Create New Study Note</h2>
+      
+      <form id="noteForm" class="note-form">
+          <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" placeholder="Enter note title" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" placeholder="Enter your note details" rows="6" required></textarea>
+          </div>
+          
+          <div class="form-group">
+              <label for="tags">Tags/Topics</label>
+              <input type="text" id="tags" placeholder="Enter comma-separated tags (e.g. Math, Physics, Biology)">
+              <div class="form-hint">Separate multiple tags with commas</div>
+          </div>
+          
+          <div class="form-group">
+              <label for="priority">Priority Level</label>
+              <select id="priority" required>
+                  <option value="" disabled selected>Select Priority</option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+              </select>
+          </div>
+          
+          <div class="form-group file-input-group">
+              <label for="image">Attach Image (Optional)</label>
+              <div class="file-input-wrapper">
+                  <input type="file" id="image" accept="image/*">
+                  <div class="file-input-button">Choose File</div>
+                  <div class="file-name">No file chosen</div>
+              </div>
+          </div>
+          
+          <div class="form-actions">
+              <button type="submit" class="btn-submit">Create Note</button>
+              <button type="reset" class="btn-reset">Clear Form</button>
+          </div>
+      </form>
+      
+      <div id="successMsg" class="success-message"></div>
+  </section>
+</main>
+<footer class="site-footer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+          <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@yourcompany.com</p>
+      </div>
+      
+      <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact">Contact</a></li>
+          </ul>
+      </div>
+      
+      <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+      </div>
+      
+      <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for updates</p>
+          <form>
+              <input type="email" placeholder="Enter your email">
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+  </div>
+  
+  <div class="footer-bottom">
+      <p>© 2025 Your Company Name. All Rights Reserved.</p>
+      <div class="footer-legal">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-of-service">Terms of Service</a>
+      </div>
+  </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
